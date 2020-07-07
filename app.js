@@ -19,10 +19,12 @@ app.use(bodyParser.urlencoded({
 })); 
 
 app.post('/sign_up', function(req,res){ 
+	var name = req.body.name; 
 	var email =req.body.email; 
-	var pass = req.body.password;
+	var pass = req.body.password; 
 
 	var data = { 
+		"name": name, 
 		"email":email, 
 		"password":pass
 	} 
