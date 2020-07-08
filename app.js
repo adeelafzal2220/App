@@ -1,4 +1,4 @@
-var express=require("express"); 
+/*var express=require("express"); 
 var bodyParser=require("body-parser"); 
 
 const mongoose = require('mongoose'); 
@@ -26,9 +26,9 @@ app.post('/sign_up', function(req,res){
 	var data = { 
 		"name": name, 
 		"email":email, 
-		"password":pass
+		"password":pass, 
 	} 
-db.collection('details').insertOne(data,function(err, collection){ 
+db.collection('users').insertOne(data,function(err, collection){ 
 		if (err) throw err; 
 		console.log("Record inserted Successfully"); 
 			
@@ -46,4 +46,26 @@ return res.redirect('index.html');
 }).listen(3000) 
 
 
-console.log("server listening at port 3000"); 
+console.log("server listening at port 3000"); */
+
+
+
+const mongodb = require('mongodb')
+const MongoClient = mongodb.MongoClient
+
+const connectionURL = 'mongodb://127.0.0.1:27017'
+const databaseName = 'task-manager'
+
+MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) => {
+    if (error) {
+        return console.log('Unable to connect to database!')
+    }
+
+    const db = client.db(databaseName)
+    
+    db.collection('users').insertOne({
+        name: 'Adeel',
+        email: 'adeelafzal2220@gmail.com',
+        password: 'password123'
+    })
+})
