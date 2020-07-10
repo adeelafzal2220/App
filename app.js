@@ -1,4 +1,4 @@
-/*var express=require("express"); 
+ var express=require("express"); 
 var bodyParser=require("body-parser"); 
 
 const mongoose = require('mongoose'); 
@@ -46,9 +46,9 @@ return res.redirect('index.html');
 }).listen(3000) 
 
 
-console.log("server listening at port 3000"); */
+console.log("server listening at port 3000"); 
 
-
+/*
 
 const mongodb = require('mongodb')
 const MongoClient = mongodb.MongoClient
@@ -68,4 +68,4 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
         email: 'adeelafzal2220@gmail.com',
         password: 'password123'
     })
-})
+}) */

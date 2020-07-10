@@ -29,3 +29,100 @@ input[type=submit] {
 	margin: 4px 2px; 
 	border-radius: 10px; 
 } 
+
+
+/* login icon*/
+
+
+.topbar .top-navbar .navbar-nav>.nav-item {
+    transition: .2s ease-in;
+}
+.dropdown, .dropleft, .dropright, .dropup {
+    position: relative;
+}
+* {
+    outline: 0;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+user agent stylesheet
+ul {
+    list-style-type: disc;
+}
+body {
+    margin: 0;
+    overflow-x: hidden;
+    color: #313131;
+    background: #fff;
+    font-weight: 400;
+}
+body {
+    margin: 0;
+    font-family: Rubik,sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #313131;
+    text-align: left;
+    background-color: #edf1f5;
+}
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #ff5050;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #2cd07e;
+    --teal: #20c997;
+    --cyan: #4fc3f7;
+    --white: #fff;
+    --gray: #8898aa;
+    --gray-dark: #313131;
+    --primary: #707cd2;
+    --secondary: #8898aa;
+    --success: #2cd07e;
+    --info: #2cabe3;
+    --warning: #ffc36d;
+    --danger: #ff5050;
+    --light: #f7fafc;
+    --dark: #313131;
+    --cyan: #4fc3f7;
+    --orange: #ffc36d;
+    --purple: #707cd2;
+    --inverse: #4c5667;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xlg: 1600px;
+    --font-family-sans-serif: "Rubik",sans-serif;
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
