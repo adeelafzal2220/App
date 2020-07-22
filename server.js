@@ -5,7 +5,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 const app = express();
 
-// serve files from the public directory
+//  serve files from the public directory
 app.use(express.static('public'));
 
 // connect to the db and start the express server

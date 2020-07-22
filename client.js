@@ -10,7 +10,7 @@ button.addEventListener('click', function(e) {
         console.log('click was recorded');
         return;
       }
-      throw new Error('Request failed.');
+      throw new Error('Request failed!');
     })
     .catch(function(error) {
       console.log(error);
