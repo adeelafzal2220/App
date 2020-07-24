@@ -30,6 +30,25 @@ input[type=submit] {
 	border-radius: 10px; 
 } 
 
+/* Search bar */
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+
+/* Highlight */
+.highlight {
+    background-color: rgb(26, 224, 0);
+  }
+
+  span.highlight{
+      background:yellow; padding:3px;
+    }
+
 
 /* login icon*/
 

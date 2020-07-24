@@ -4,11 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Quaker Web App</title>
+<link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="./bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script>
+find = function highlight(text) {
+    var s = document.getElementById("inputText");
+    var p = inputText.innerHTML;
+    var index = innerHTML.indexOf(text);
+    var StringLength = p.innerText.split('');
+
+    // if (index >= 0) { 
+      for(var i=0; i<=StringLenght.length ;i++)
+      {
+    //  innerHTML = innerHTML.substring(i,index) + "<span class='highlight'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length);
+    //  inputText.innerHTML = innerHTML;
+
+    if(StringLength[i].toLowerCase() == s.value.toLowerCase()){
+            StringLength[i] = '<span class="highlight">' + StringLength[i] + "</span>";
+            p.innerHTML = StringLength.join(' ');
+        }
+        else{
+
+        }   
+      }
+    //}
+  }
+  s.addEventListener('keydown', find , false);
+  s.addEventListener('keyup', find , false);  
+</script>
 
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <a href="#" class="navbar-brand">
@@ -20,8 +46,8 @@
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-                <a href="#" class="nav-item nav-link active">Home</a>
-                 <a href="#" class="nav-item nav-link active">List</a>
+                <a href="./Home.html" class="nav-item nav-link active">Home</a>
+                 <!-- <a href="./List.html" class="nav-item nav-link active">List</a> -->
             </div>
             <div class="navbar-nav ml-auto" >
               <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,14 +72,13 @@
 
 </head>
 <body>
-
-
+  
  <br><br>
 
   <div class="site-section bg-light">
-      <div class="container">
+     <!-- <div class="container"> -->
         <div class="row">
-          <div class="col-md-4 mb-4">
+          <div class="col-md-3 mb-3">
 
             
 
@@ -94,15 +119,16 @@
                 </div>
             
 
-                <div>
-                  <button id="myButton">Button</button>
-                </div>
+         
+                
+            
 
 
               </div>
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit" value="Apply" class="btn btn-primary py-2 px-4 text-white">
+                  <button id="myButton" class="btn btn-primary py-2 px-4 text-white">Apply</button>
+              
                 </div>
               </div>
 
@@ -110,46 +136,56 @@
             </form>
           </div>
 
-          <div class="col-md-8">
+          <div class="col-md-6">
 
             <div class="p-4 mb-3 bg-white">
 
              <h3 class="h5 text-black mb-3">Labeled Article</h3>
 
-             <button type="button" class="btn btn-link">Clickable Link</button>
-           <button type="button" class="btn btn-link">Clickable Link</button>
-           <button type="button" class="btn btn-link">Clickable Link</button>
-           <button type="button" class="btn btn-link">Clickable Link</button>
-           <button type="button" class="btn btn-link">Clickable Link</button>
-           <button type="button" class="btn btn-link">Clickable Link</button>
-           <button type="button" class="btn btn-link">Clickable Link</button>
-           <button type="button" class="btn btn-link">Clickable Link</button>
-           <button type="button" class="btn btn-link">Clickable Link</button>
-           <button type="button" class="btn btn-link">Clickable Link</button>
+              <button type="button" class="btn btn-link" onclick="highlight('quick')">Quick</button>
+              <button type="button" class="btn btn-link" onclick="highlight('brown')">Brown</button>
+              <button type="button" class="btn btn-link" onclick="highlight('fox')">Fox</button>
+              <button type="button" class="btn btn-link" onclick="highlight('jumps')">Jumps</button>
+              <button type="button" class="btn btn-link" onclick="highlight('lazy')">Lazy</button>
+              <button type="button" class="btn btn-link" onclick="highlight('dog')">Dog</button>
   
             </div>
             
-            <div class="p-4 mb-3 bg-white">
+            <!-- <div class="p-4 mb-3 bg-white" id="inputText">
        
-              <textarea name="message" id="message" readonly="true" cols="30" rows="8" class="form-control"></textarea>
-            </div>
+              <textarea name="message" id="inputText" readonly="" cols="30" rows="8" class="form-control">The fox went over the fence</textarea>
+            </div> -->
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13280.737981301776!2d73.00705992977734!3d33.67828664773816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbe1f4447adf5%3A0xac381766b408a3d7!2sG-10%2C%20Islamabad%2C%20Islamabad%20Capital%20Territory%2C%20Pakistan!5e0!3m2!1sen!2s!4v1594379050875!5m2!1sen!2s" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div id="inputText">
+              The quick brown fox jumps over the lazy dog.
+              The quick brown fox jumps over the lazy dog.
+              The quick brown fox jumps over the lazy dog.
+              The quick brown fox jumps over the lazy dog.
+              The quick brown fox jumps over the lazy dog.
+              The quick brown fox jumps over the lazy dog.
+              The quick brown fox jumps over the lazy dog.
+              The quick brown fox jumps over the lazy dog.
+              The quick brown fox jumps over the lazy dog.
+              The quick brown fox jumps over the lazy dog.
+            </div>
+            <br></br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13280.737981301776!2d73.00705992977734!3d33.67828664773816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbe1f4447adf5%3A0xac381766b408a3d7!2sG-10%2C%20Islamabad%2C%20Islamabad%20Capital%20Territory%2C%20Pakistan!5e0!3m2!1sen!2s!4v1594379050875!5m2!1sen!2s" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
           </div>
+
+
+          <div class="col-md-3">
+            <label for="input-file-now">List of files:</label>
+            <div class="topnav">
+              <input type="text" placeholder="Search...">
+              </div>
+          </div>
+
+
         </div>
       </div>
-
-
-    </div>
- 
-
-    
-  </div>
-
-
-
-
+    <!-- </div> -->
+  
 
 </body>
 </html>

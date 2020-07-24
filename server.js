@@ -5,7 +5,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 const app = express();
 
-//  serve files from the public directory
+//  serve files from the public dire    ctory
 app.use(express.static('public'));
 
 // connect to the db and start the express server
@@ -24,7 +24,7 @@ MongoClient.connect(url, (err, database) => {
     console.log('listening on 8080');
   });
 });
-
+    
 // serve the homepage
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
