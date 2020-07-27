@@ -47,7 +47,7 @@ find = function highlight(text) {
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
                 <a href="./Home.html" class="nav-item nav-link active">Home</a>
-                 <!-- <a href="./List.html" class="nav-item nav-link active">List</a> -->
+                 <a href="./List.html" class="nav-item nav-link active">List</a>
             </div>
             <div class="navbar-nav ml-auto" >
               <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,9 +76,9 @@ find = function highlight(text) {
  <br><br>
 
   <div class="site-section bg-light">
-     <!-- <div class="container"> -->
+     <div class="container">
         <div class="row">
-          <div class="col-md-3 mb-3">
+          <div class="col-md-4 mb-3">
 
             
 
@@ -90,8 +90,8 @@ find = function highlight(text) {
                  
                         <label for="input-file-now">UPLOAD FILE :</label>
         <div class="file-upload-wrapper">
-  <input type="file" id="input-file-now" class="file-upload" />
-</div>
+          <input type="file" id="input-file-now" class="file-upload" />
+        </div>
                 </div>
              
               </div>
@@ -127,7 +127,7 @@ find = function highlight(text) {
               </div>
               <div class="row form-group">
                 <div class="col-md-12">
-                  <button id="myButton" class="btn btn-primary py-2 px-4 text-white">Apply</button>
+                  <button id="myButton" class="btn btn-info py-2 px-4 text-white">Apply</button>
               
                 </div>
               </div>
@@ -136,9 +136,9 @@ find = function highlight(text) {
             </form>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-5">
 
-            <div class="p-4 mb-3 bg-white">
+            <!-- <div class="p-4 mb-3 bg-white">
 
              <h3 class="h5 text-black mb-3">Labeled Article</h3>
 
@@ -149,13 +149,13 @@ find = function highlight(text) {
               <button type="button" class="btn btn-link" onclick="highlight('lazy')">Lazy</button>
               <button type="button" class="btn btn-link" onclick="highlight('dog')">Dog</button>
   
-            </div>
+            </div> -->
             
             <!-- <div class="p-4 mb-3 bg-white" id="inputText">
        
               <textarea name="message" id="inputText" readonly="" cols="30" rows="8" class="form-control">The fox went over the fence</textarea>
             </div> -->
-
+            <label for="input-file-now">Article: </label>
             <div id="inputText">
               The quick brown fox jumps over the lazy dog.
               The quick brown fox jumps over the lazy dog.
@@ -166,25 +166,60 @@ find = function highlight(text) {
               The quick brown fox jumps over the lazy dog.
               The quick brown fox jumps over the lazy dog.
               The quick brown fox jumps over the lazy dog.
+              The quick brown fox jumps over the lazy dog. 
+              The quick brown fox jumps over the lazy dog.
+              The quick brown fox jumps over the lazy dog.
+              The quick brown fox jumps over the lazy dog.
+              The quick brown fox jumps over the lazy dog.
               The quick brown fox jumps over the lazy dog.
             </div>
+            <br></br>
             <br></br>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13280.737981301776!2d73.00705992977734!3d33.67828664773816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbe1f4447adf5%3A0xac381766b408a3d7!2sG-10%2C%20Islamabad%2C%20Islamabad%20Capital%20Territory%2C%20Pakistan!5e0!3m2!1sen!2s!4v1594379050875!5m2!1sen!2s" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
           </div>
 
+          
 
           <div class="col-md-3">
-            <label for="input-file-now">List of files:</label>
-            <div class="topnav">
-              <input type="text" placeholder="Search...">
-              </div>
+            <label for="input-file-now">Labels: </label>
+            <div >
+              <button type="button" class="btn btn-outline-info btn-lg btn-block" onclick="highlight('quick')">Victim Name</button>
+            </div>
+            <div >
+              <button type="button" class="btn btn-outline-info btn-lg btn-block">Accident Vehicle Name</button>
+            </div>
+            <div >
+              <button type="button" class="btn btn-outline-info btn-lg btn-block">Number of Deaths</button>
+            </div>
+            <div >
+              <button type="button" class="btn btn-outline-info btn-lg btn-block">Mention of Deaths</button>
+            </div>
+            <div >
+              <button type="button" class="btn btn-outline-info btn-lg btn-block">Number of Injuries</button>
+            </div>
+            <div >
+              <button type="button" class="btn btn-outline-info btn-lg btn-block">Mention of Injuries</button>
+            </div>
+            <div >
+              <button type="button" class="btn btn-outline-info btn-lg btn-block">Accident Location</button>
+            </div>
+            <div >
+              <button type="button" class="btn btn-outline-info btn-lg btn-block">Hospital Name</button>
+            </div>
+            <div >
+              <button type="button" class="btn btn-outline-info btn-lg btn-block">Hospital Mention</button>
+            </div>
+            <div >
+              <button type="button" class="btn btn-outline-info btn-lg btn-block">Mention of Ambulance</button>
+            </div>
+            
           </div>
 
 
         </div>
       </div>
-    <!-- </div> -->
+    </div>
   
 
 </body>
