@@ -64,17 +64,17 @@ find = function highlight(text) {
         <a href="#" class="navbar-brand">
             <img src="./LOGO.jpeg" height="28" alt="CoolBrand">
         </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <button id="navbarcollapsebutton" type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-                <a href="./Home.html" class="nav-item nav-link active">Home</a>
-                 <a href="./List.html" class="nav-item nav-link active">List</a>
+                <a href="./Home.html" id="homebutton" class="nav-item nav-link active">Home</a>
+                 <a href="./List.html" id="listbutton" class="nav-item nav-link active">List</a>
             </div>
             <div class="navbar-nav ml-auto" >
-              <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler" type="button" id="navbarprofilebutton"  data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
    
             </button>
 
@@ -85,7 +85,7 @@ find = function highlight(text) {
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
          
-          <a class="dropdown-item" href="#">Log Out</a>
+          <a class="dropdown-item" id="logoutlink" href="#">Log Out</a>
         </div>
       </li>   
     </ul>
@@ -115,7 +115,7 @@ find = function highlight(text) {
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                  
-                        <label for="input-file-now">UPLOAD FILE :</label>
+                        <label for="input-file-now" id="uploadlabel">UPLOAD FILE :</label>
         <div class="file-upload-wrapper">
           <input type="file" id="input-file-now" class="file-upload" />
         </div>
@@ -126,15 +126,15 @@ find = function highlight(text) {
               <div class="row form-group">
                 
                 <div class="col-md-12">
-                  <label class="text-black" for="email">Enter URL :</label> 
-                  <input type="url" id="url class="form-control">
+                  <label class="text-black" for="email" id="urllabel">Enter URL :</label> 
+                  <input type="url" id="url" class="form-control">
                 </div>
               </div>
 
          
               <div class="row form-group">
                 <div class="col-md-12">
-                  <label class="text-black" for="message">Enter Text/Article :</label> 
+                  <label class="text-black" for="message" id="textlabel">Enter Text/Article :</label> 
                   <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
                 </div>
               </div>
@@ -247,73 +247,73 @@ find = function highlight(text) {
             <div class="panel-group" id="accordion">
               <div class="panel panel-primary">
                 <div class="panel-heading ">
-                  <h3 class="panel-title">Victim Name</h3>
+                  <h3 class="panel-title" id="victimname">Victim Name</h3>
                   <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
                 </div>
-                <div class="panel-body" style="display: none">Panel content</div>
+                <div class="panel-body" style="display: none" id="victimnamecontent">Panel content</div>
               </div>
               <div class="panel panel-primary">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Accident Vehicle Name</h3>
+                  <h3 class="panel-title" id="vehiclename">Accident Vehicle Name</h3>
                   <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
                 </div>
-                <div class="panel-body" style="display: none">Panel content</div>
+                <div class="panel-body" style="display: none" id="vhiclenamecontent">Panel content</div>
               </div>
               <div class="panel panel-primary">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Number of Deaths</h3>
+                  <h3 class="panel-title" id="noofdeaths">Number of Deaths</h3>
                   <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
                 </div>
-                <div class="panel-body" style="display: none">Panel content</div>
+                <div class="panel-body" style="display: none" id="noofdeathscontent">Panel content</div>
               </div>
               <div class="panel panel-primary">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Mention of Deaths</h3>
+                  <h3 class="panel-title" id="mentionofdeaths">Mention of Deaths</h3>
                   <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
                 </div>
-                <div class="panel-body" style="display: none">Panel content</div>
+                <div class="panel-body" style="display: none" id="mentionofdeathscontent">Panel content</div>
               </div>
               <div class="panel panel-primary">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Number of Injuries</h3>
+                  <h3 class="panel-title" id="noofinjuries">Number of Injuries</h3>
                   <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
                 </div>
-                <div class="panel-body" style="display: none">Panel content</div>
+                <div class="panel-body" style="display: none" id="noofinjuriescontent">Panel content</div>
               </div>
               <div class="panel panel-primary">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Mention of Injuries</h3>
+                  <h3 class="panel-title" id="mentionofinjuries">Mention of Injuries</h3>
                   <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
                 </div>
-                <div class="panel-body" style="display: none">Panel content</div>
+                <div class="panel-body" style="display: none" id="mentionofinjuriescontent">Panel content</div>
               </div>
               <div class="panel panel-primary">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Accident Location</h3>
+                  <h3 class="panel-title" id="accidentlocation">Accident Location</h3>
                   <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
                 </div>
-                <div class="panel-body" style="display: none">Panel content</div>
+                <div class="panel-body" style="display: none" id="accidentlocationcontent">Panel content</div>
               </div>
               <div class="panel panel-primary">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Hospital Name</h3>
+                  <h3 class="panel-title" id="hospitalname">Hospital Name</h3>
                   <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
                 </div>
-                <div class="panel-body" style="display: none">Panel content</div>
+                <div class="panel-body" style="display: none" id="hospitalnamecontent">Panel content</div>
               </div>
               <div class="panel panel-primary">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Hospital Mention</h3>
+                  <h3 class="panel-title" id="hospitalmention">Hospital Mention</h3>
                   <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
                 </div>
-                <div class="panel-body" style="display: none">Panel content</div>
+                <div class="panel-body" style="display: none" id="hospitalmentioncontent">Panel content</div>
               </div>
               <div class="panel panel-primary">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Mention of Ambulance</h3>
+                  <h3 class="panel-title" id="ambulance">Mention of Ambulance</h3>
                   <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
                 </div>
-                <div class="panel-body" style="display: none">Panel content</div>
+                <div class="panel-body" style="display: none" id="ambulancecontent">Panel content</div>
               </div>
               </div>
             </div> 
