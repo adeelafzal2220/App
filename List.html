@@ -12,22 +12,30 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 <script>
-  $(document).on('click', '.panel-heading span.clickable', function(e){
-   var $this = $(this);
- if(!$this.hasClass('panel-collapsed')) {
-   $this.parents('.panel').find('.panel-body').slideUp();
-   $this.addClass('panel-collapsed');
-   $this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
- } else {
-   $this.parents('.panel').find('.panel-body').slideDown();
-   $this.removeClass('panel-collapsed');
-   $this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
- }
-})
+$(document).on('click', '.panel div.clickable', function (e) {
+    var $this = $(this); //Heading
+    var $panel = $this.parent('.panel');
+    var $panel_body = $panel.children('.panel-body');
+    var $display = $panel_body.css('display');
+
+    if ($display == 'block') {
+        $panel_body.slideUp();
+    } else if($display == 'none') {
+        $panel_body.slideDown();
+    }
+});
+
+$(document).ready(function(e){
+    var $classy = '.panel.autocollapse';
+
+    var $found = $($classy);
+    $found.find('.panel-body').hide();
+    $found.removeClass($classy);
+});
 </script>
 
 <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -154,7 +162,6 @@
 
 
           <div class="col-md-3">
-            <label for="input-file-now">Labels: </label>
             <!-- <div >
               <button type="button" class="btn btn-outline-info btn-lg btn-block" onclick="highlight('quick')">Victim Name</button>
             </div>
@@ -187,80 +194,117 @@
             </div> -->
             
  <!-- START CARDS -->
- <div class="panel-group" id="accordion">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Victim Name</h3>
-      <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-up"></i></span>
+ <div class="panel panel-primary">
+  <div class="panel-heading clickable">
+  <h3 class="panel-title">Labels</h3>
+</div>    	
+<div class="panel-body">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-info autocollapse">
+        <div class="panel-heading clickable">
+          <h3 class="panel-title">
+            Victim Name
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div >Details</div>
+        </div>
+      </div>
+      <div class="panel panel-info autocollapse">
+        <div class="panel-heading clickable">
+          <h3 class="panel-title">
+            Accident Vehicle Name
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="alert alert-danger" role="alert">Details</div>
+        </div>
+      </div>
+      <div class="panel panel-info autocollapse">
+        <div class="panel-heading clickable">
+          <h3 class="panel-title">
+            Number of Deaths
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="alert alert-danger" role="alert">Details</div>
+        </div>
+      </div>
+      <div class="panel panel-info autocollapse">
+        <div class="panel-heading clickable">
+          <h3 class="panel-title">
+            Mention of Deaths
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="alert alert-danger" role="alert">Details</div>
+        </div>
+      </div>
+      <div class="panel panel-info autocollapse">
+        <div class="panel-heading clickable">
+          <h3 class="panel-title">
+            Number of Injuries
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="alert alert-danger" role="alert">Details</div>
+        </div>
+      </div>
+      <div class="panel panel-info autocollapse">
+        <div class="panel-heading clickable">
+          <h3 class="panel-title">
+            Mention of Injuries
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="alert alert-danger" role="alert">Details</div>
+        </div>
+      </div>
+      <div class="panel panel-info autocollapse">
+        <div class="panel-heading clickable">
+          <h3 class="panel-title">
+            Accident Location
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="alert alert-danger" role="alert">Details</div>
+        </div>
+      </div>
+      <div class="panel panel-info autocollapse">
+        <div class="panel-heading clickable">
+          <h3 class="panel-title">
+            Hospital Name
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="alert alert-danger" role="alert">Details</div>
+        </div>
+      </div>
+      <div class="panel panel-info autocollapse">
+        <div class="panel-heading clickable">
+          <h3 class="panel-title">
+            Hospital Mention
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="alert alert-danger" role="alert">Details</div>
+        </div>
+      </div>
+      <div class="panel panel-info autocollapse">
+        <div class="panel-heading clickable">
+          <h3 class="panel-title">
+            Mention of Ambulance
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="alert alert-danger" role="alert">Details</div>
+        </div>
+      </div>
     </div>
-    <div class="panel-body" style="display: none">Panel content</div>
   </div>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Accident Vehicle Name</h3>
-      <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-up"></i></span>
-    </div>
-    <div class="panel-body" style="display: none">Panel content</div>
-  </div>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Number of Deaths</h3>
-      <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-up"></i></span>
-    </div>
-    <div class="panel-body" style="display: none">Panel content</div>
-  </div>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Mention of Deaths</h3>
-      <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-up"></i></span>
-    </div>
-    <div class="panel-body" style="display: none">Panel content</div>
-  </div>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Number of Injuries</h3>
-      <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-up"></i></span>
-    </div>
-    <div class="panel-body" style="display: none">Panel content</div>
-  </div>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Mention of Injuries</h3>
-      <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-up"></i></span>
-    </div>
-    <div class="panel-body" style="display: none">Panel content</div>
-  </div>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Accident Location</h3>
-      <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-up"></i></span>
-    </div>
-    <div class="panel-body" style="display: none">Panel content</div>
-  </div>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Hospital Name</h3>
-      <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-up"></i></span>
-    </div>
-    <div class="panel-body" style="display: none">Panel content</div>
-  </div>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Hospital Mention</h3>
-      <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-up"></i></span>
-    </div>
-    <div class="panel-body" style="display: none">Panel content</div>
-  </div>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Mention of Ambulance</h3>
-      <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-up"></i></span>
-    </div>
-    <div class="panel-body" style="display: none">Panel content</div>
-  </div>
-  </div>
-</div> 
-
+</div>
+</div>
 
 <!-- END CARD -->
 
